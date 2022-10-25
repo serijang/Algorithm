@@ -1,0 +1,23 @@
+// array_len은 배열 array의 길이입니다.
+int solution(int array[], size_t array_len, int n) {
+    int answer = 0;
+    for(int i = 0; i <= array_len-1; i++) {
+        if(array[i] == n) {
+        answer++;
+        }
+    }
+    return answer;
+}
+
+
+
+## 더 간단한 풀이
+class Solution {
+    public int solution(int[] array, int n) {
+        int answer = 0;
+        for (int num : array) {   // 향상된 for문
+            if (num == n) answer++;
+        }
+        return answer;
+    }
+}
