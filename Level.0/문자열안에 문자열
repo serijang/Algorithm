@@ -10,6 +10,15 @@ class Solution {
     }
 }
 
+// 삼항연산자를 이용한 방법 -> 삼항연산자를 다는 걸 계속 까먹는다..
+class Solution {
+    public int solution(String str1, String str2) {
+        int answer = (str1.contains(str2)) ? 1 : 2 ;
+
+        return answer;
+    }
+}
+
 
 // 시도하다가 틀린 방법
 class Solution {
