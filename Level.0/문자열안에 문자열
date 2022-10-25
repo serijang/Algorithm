@@ -1,0 +1,32 @@
+class Solution {
+    public int solution(String str1, String str2) {
+        int answer;
+        if(str1.contains(str2)) {  // contains() 메소드를 이용해서 풀면 된다!
+            answer = 1;
+        } else {
+            answer = 2;
+        }
+        return answer;
+    }
+}
+
+
+// 시도하다가 틀린 방법
+class Solution {
+    public int solution(String str1, String str2) {
+        int answer = 0;
+        String result = "";
+        int len = str2.length();
+        StringBuilder br = new StringBuilder();  // 너무 복잡하게 생각했음.
+        br.append(str1);
+
+        for(int i = 0; i <= str1.length()-1; i++) {
+            result = br.substring(i,i+len-1).toString();
+            if(result.equals(str2)) {
+                answer = 1;
+            } else {
+                answer = 2;
+            }  
+        } return answer;
+    }
+}
