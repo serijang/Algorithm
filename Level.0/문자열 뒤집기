@@ -1,0 +1,22 @@
+class Solution {
+    public String solution(String my_string) {
+        String answer = "";
+        int len = my_string.length();
+        for(int i=len-1; i >= 0; i--) {
+            answer += my_string.charAt(i);
+        }
+        return answer;
+    }
+}
+
+
+// StringBuffer를 사용한 풀이
+class Solution {
+    public String solution(String my_string) {
+
+        StringBuffer words = new StringBuffer(my_string);
+        String answer = words.reverse().toString();
+
+        return answer;
+    }
+}
