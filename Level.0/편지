@@ -1,0 +1,14 @@
+class Solution {
+    public int solution(String message) {
+        int answer = message.length();
+        return 2*answer;
+    }
+}
+
+
+// 더 간단한 방법
+class Solution {
+    public int solution(String message) {
+        return message.length()*2;  // 바로 리턴값에 넣어주기
+    }
+}
