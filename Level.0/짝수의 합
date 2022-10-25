@@ -1,0 +1,21 @@
+int solution(int n) {
+    int answer = 0;
+    for(int i=0; i<= n; i++) {
+        if(i % 2 == 0 ) {
+            answer += i;
+        }
+    }
+    return answer;
+}
+
+
+// 다른 풀이
+int solution(int n) {
+    int answer = 0;
+
+    for (int i = 2; i <= n; i += 2) {  // i = 2로 잡고 2씩 증가하는 짝수만 더하고, 그 수가 n보다 작을 때까지 합하도록 설계
+        answer += i;
+    }
+
+    return answer;
+}
