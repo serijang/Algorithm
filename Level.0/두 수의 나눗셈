@@ -1,0 +1,8 @@
+int solution(int num1, int num2) {
+    double answer = (double) num1 / num2 * 1000;
+    return (int) answer;
+}
+
+// (num1/num2) 괄호 치지 말기.
+// 괄호 칠거라면, ((double) num1 / num2) 처럼 double도 괄호 안에 넣어주던가
+// ((double) num1 / (double) num2) * (double) 1000 -> 처럼 각각의 변수를 모두 캐스팅해주기
