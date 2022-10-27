@@ -1,0 +1,29 @@
+class Solution {
+    public int[] solution(int n) {
+        int[] answer = n%2 == 0 ? new int[n/2] : new int[n/2+1];
+
+        int j = 0;
+        for(int i = 1; i <= n; i+=2) {
+            answer[j] = i;
+            j++;
+        }
+        return answer;
+    }
+}
+
+
+// List와 ArrayList를 사용하는 방법
+import java.util.List;
+import java.util.ArrayList;
+
+class Solution {
+    public int[] solution(int n) {
+        List<Integer> answer = new ArrayList<>();  // int list 선언
+        for(int i=1; i<=n; i++){
+            if(i % 2 == 1){
+                answer.add(i);  // 홀수 일 때, list에 넣어준다.
+            }
+        }
+        return answer.stream().mapToInt(x -> x).toArray();
+    }
+}
