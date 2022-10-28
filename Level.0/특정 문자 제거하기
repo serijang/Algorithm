@@ -1,0 +1,6 @@
+class Solution {
+    public String solution(String my_string, String letter) {
+        String answer = my_string.replace(letter, "");   // String letter 글자 1개를 ""로 치환
+        return answer;
+    }
+}
