@@ -1,0 +1,7 @@
+class Solution {
+    public int solution(int n, int t) {
+        int answer = 0;
+        answer = (int) (n * Math.pow(2, t));  // 거듭 제곱을 구하는 함수를 이용. 기본형 : double
+        return answer;
+    }
+}
