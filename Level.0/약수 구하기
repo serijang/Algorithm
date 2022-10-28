@@ -1,0 +1,33 @@
+import java.util.Arrays;
+class Solution {
+    public int[] solution(int n) {
+        int cnt = 0;
+        int[] answer = new int[n];
+        for (int i = 1; i<= n; i++) {
+            for (int j = 1; j<= n; j++) {
+                if(i * j == n) {
+                    answer[cnt] = i;
+                    cnt++;
+                }
+            }
+        }
+        return Arrays.copyOfRange(answer, 0, cnt);
+    }
+}
+
+
+// 다른 풀이
+import java.util.List;
+import java.util.ArrayList;
+
+class Solution {
+    public int[] solution(int n) {
+        List<Integer> answer = new ArrayList<>();  // List를 만듦
+        for(int i=1; i<=n; i++){
+            if(n % i == 0){   // 나는 곱하면 n이 되는 수를 구했는데, 대부분이 n을 i로 나눴을 때 나머지가 0인 경우를 카운팅했다.
+                answer.add(i);  // 순서[]에 관계없이, 배열에 추가해주면 됨.
+            }
+        }
+        return answer.stream().mapToInt(x -> x).toArray();
+    }
+}
