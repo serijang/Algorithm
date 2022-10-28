@@ -1,0 +1,40 @@
+class Solution {
+    public String solution(String my_string, int n) {
+        String answer = "";
+        String temp = "";
+        for(int i =0; i<= my_string.length()-1; i++ ){
+            temp = my_string.substring(i,i+1);
+            answer += temp.repeat(n);   // 문자열을 n번 반복해주는 메소드
+        }
+        return answer;
+    }
+}
+
+
+// String[] 배열에 넣어서 출력하기
+class Solution {
+    public String solution(String my_string, int n) {
+        String answer = "";
+        String[] str = my_string.split("");
+        for(int i=0; i<my_string.length(); i++){
+            answer += str[i].repeat(n);
+        }
+        return answer;
+    }
+}
+
+
+//  for문 2번돌려서 출력
+class Solution {
+    public String solution(String my_string, int n) {
+        String answer = "";
+
+        for(int i=0; i<my_string.length(); i++){ 
+            for(int j=0; j<n; j++){
+                answer+=my_string.charAt(i);
+            }
+        }
+
+        return answer;
+    }
+}
