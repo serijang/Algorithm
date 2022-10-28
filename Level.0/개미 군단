@@ -1,0 +1,32 @@
+class Solution {
+    public int solution(int hp) {
+        int answer = 0;
+        int temp = 0;
+            answer = hp/5;
+            hp -= 5*answer;
+            if(hp / 3 > 0) {
+                temp = hp / 3;
+                answer += temp;
+                hp -= 3*temp;
+                answer += hp;  // 일개미의 수
+            } else {
+                answer += hp;
+            }
+        return answer;
+    }
+}
+
+// 더 간단한 풀이
+class Solution {
+    public int solution(int hp) {
+        int answer = hp / 5;  // 처음 몫
+        hp %= 5;  // 어차피 나머지는 5미만
+
+        answer += hp / 3;  // 3으로 나눌 수 없으면 int 0을 반환할테니 바로 몫을 더해주면 됨
+        hp %= 3;  // 3으로 안나눠지면 원래 나머지가 그대로 대입.
+
+        answer += hp / 1;
+
+        return answer;
+    }
+}
