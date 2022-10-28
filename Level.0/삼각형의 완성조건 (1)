@@ -1,0 +1,24 @@
+import java.util.Arrays;
+class Solution {
+    public int solution(int[] sides) {
+        int answer = 0;
+        Arrays.sort(sides);
+        if (sides[0] + sides[1] > sides[2]){
+            answer = 1;
+        } else {
+            answer = 2;
+        }
+        return answer;
+    }
+}
+
+
+// 더 간단한 풀이
+import java.util.Arrays;
+class Solution {
+    public int solution(int[] sides) {
+        int answer = 0;
+        Arrays.sort(sides);
+        return sides[2] >= sides[0]+sides[1] ? 2 : 1;   // if문 대신 return에 삼항연산자를 이용해서 풀어줬다.
+    }
+}
