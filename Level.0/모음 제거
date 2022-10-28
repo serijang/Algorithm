@@ -1,0 +1,24 @@
+class Solution {
+    public String solution(String my_string) {
+        String answer = "";
+        for(int i =0; i <= my_string.length()-1; i++) {
+            char chr = my_string.charAt(i);
+            if(chr != 'a' && chr != 'e' && chr != 'i'&& chr != 'o'&& chr != 'u') {
+                answer += my_string.charAt(i);
+            }
+        }
+        return answer;
+    }
+}
+
+
+// 더 간단한 풀이
+class Solution {
+    public String solution(String my_string) {
+        String answer = "";
+
+        answer = my_string.replaceAll("[aeiou]", "");  // replaceAll 메서드를 이용해서 []정규식 안에 있는 문자들을 없애줌.
+
+        return answer;
+    }
+}
