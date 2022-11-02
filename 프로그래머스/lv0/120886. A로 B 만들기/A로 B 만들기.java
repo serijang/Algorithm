@@ -7,7 +7,7 @@ class Solution {
         char[] afterArr = after.toCharArray();
         Arrays.sort(beforeArr);
         Arrays.sort(afterArr);
-        if(Arrays.equals(beforeArr, afterArr)) {
+        if(Arrays.equals(beforeArr, afterArr)) {   // return new String(a).equals(new String(b)) ? 1 :0; 로 변경할 수도 있다.
             answer++;
         }
         return answer;
