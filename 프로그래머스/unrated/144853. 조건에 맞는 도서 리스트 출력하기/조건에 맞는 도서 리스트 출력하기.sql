@@ -1,0 +1,2 @@
+-- 코드를 입력하세요
+SELECT book_id, to_char(published_date, 'YYYY-MM-DD') as published_date from book where category = '인문' and to_char(published_date, 'YYYY-MM-DD') >= '2021-01-01' order by published_date asc;
